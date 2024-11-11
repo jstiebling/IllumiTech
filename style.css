@@ -1,0 +1,261 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #281f1f80; 
+    color: #0047AB; /* Cobalt Blue text for contrast */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #000000; /* Dark background for header */
+    color: #ffffff; /* White text */
+}
+
+.u-name {
+    font-size: 20px;
+    padding-left: 17px;
+    color: #ffffff; /* White text */
+}
+
+.u-name b {
+    color: #ffffff; /* White text */
+}
+
+.header i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff; /* White icon */
+}
+
+.header i:hover {
+    color: #e0e0e0; /* Light gray on hover */
+}
+
+/* User Profile Section */
+.user-p {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.user-p img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffffff; /* White border around profile image */
+}
+
+.user-p h4 {
+    color: #0047AB; /* Cobalt Blue text for name */
+    padding: 5px 0;
+}
+
+/* Sidebar Styling */
+.side-bar {
+    width: 250px;
+    background: #000000; /* Dark background for sidebar */
+    min-height: 100vh;
+    transition: 500ms width; /* Smooth width transition */
+}
+
+.side-bar ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.side-bar ul li {
+    font-size: 16px;
+    padding: 15px 20px;
+    transition: 500ms background;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.side-bar ul li:hover {
+    background: #127B8E; /* Lighter hover state */
+}
+
+.side-bar ul li a {
+    text-decoration: none;
+    color: #0047AB; /* Cobalt Blue text */
+    cursor: pointer;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar .active a {
+    color: #0055CC !important; /* Slightly darker blue for active state */
+}
+
+.side-bar ul li a i {
+    padding-right: 10px;
+    font-size: 23px;
+    color: #0047AB; /* Blue icon */
+}
+
+/* Toggle Button */
+#navbtn {
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 20px;
+    color: #0047AB;
+    transition: color 0.5s;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked ~ .body .side-bar {
+    width: 60px;
+}
+
+#checkbox:checked ~ .body .side-bar .user-p {
+    visibility: hidden;
+}
+
+#checkbox:checked ~ .body .side-bar ul li a span {
+    display: none;
+}
+
+
+/* Top Banner Styling */
+.top-banner {
+    background: linear-gradient(to right, #0047AB, #5A9BD5); /* Gradient background for visual interest */
+    padding: 25px 0; /* Increased padding */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Top Banner Text Styling */
+.top-banner h2 {
+    color: #FFD700; /* White text for better contrast */
+    margin: 0;
+    font-size: 2rem; /* Larger text size */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.top-banner p {
+    color: #FFD700; /* Light gray text for subtitle contrast */
+    margin: 0;
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+
+.top-banner p {
+    color: #FFD700; /* Light gray text for subtitle contrast */
+    margin: 0;
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+
+/* Login Container Styling */
+.login-container {
+    background-color: #8f8e8e; /* White background for contrast */
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered Container Styling */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Welcome Message Styling */
+.welcome-container h2 {
+    color: #ffffff !important; /* Enforces the text color to be white */
+}
+
+
+.welcome-container p {
+    color: #ffffff !important; /* White for subtitle */
+    margin: 0;
+}
+
+/* Form Styling */
+form h3 {
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    color: #0047AB; /* Cobalt Blue title */
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Input and Button Styling */
+.form-control {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #0047AB;
+    box-shadow: 0 0 0 0.2rem rgba(0, 71, 171, 0.25); /* Slight shadow for focus */
+}
+
+.btn-primary {
+    background-color: #0047AB;
+    border: none;
+    font-size: 1em;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003399; /* Darker shade on hover */
+}
+
+/* Register Link Styling */
+
+.register-link {
+    color: #000000; /* Black text for better contrast */
+}
+
+.register-link a {
+    color: #0047AB; /* Cobalt Blue for links */
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Emergency Contact Styling */
+.emergency-contact {
+    color: #000000; /* Black text for better contrast */
+}
+
+/* Alert Styling */
+.alert-danger {
+    background-color: #FFCCCC; /* Light red background for errors */
+    color: #333333; /* Dark text for readability */
+}
+
+.alert-success {
+    background-color: #000000; /* Light green background for success */
+    color: #333333; /* Dark text for readability */
+}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Estimate - AV Company</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0047AB; /* Cobalt Blue background */
+            margin: 0;
+            color: #ffffff; /* White text color for better readability */
+            padding: 20px;
+        }
+        .estimate-container {
+            margin-top: 80px;
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95); /* Slight transparency for the white background */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .estimate-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0047AB; /* Cobalt Blue for title */
+            font-weight: bold;
+        }
+        .form-check-label {
+            margin-bottom: 10px;
+            color: #0047AB;
+        }
+        .additional-input {
+            margin-top: 20px;
+        }
+        .additional-input label {
+            color: #0047AB;
+            font-weight: bold;
+        }
+        .btn-submit {
+            background-color: #0047AB;
+            border-color: #0047AB;
+            color: #ffffff;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #003580;
+            border-color: #003580;
+        }
+        .notification {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        .back-to-login {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000; 
+            margin-bottom: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <a href="login.php" class="btn btn-secondary back-to-login">Back to Login</a>
+
+<div class="estimate-container">
+    <div class="text-center mb-4">
+
+    </div>
+
+    <h2 class="estimate-title">Request an Estimate</h2>
+
+    <form action="submit_estimate.php" method="POST">
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service1" name="services[]" value="Audio System Installation">
+            <label class="form-check-label" for="service1">Audio System Installation</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service2" name="services[]" value="Video Conferencing Solutions">
+            <label class="form-check-label" for="service2">Video Conferencing Solutions</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service3" name="services[]" value="Lighting Solutions">
+            <label class="form-check-label" for="service3">Lighting Solutions</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service4" name="services[]" value="Home Theater Systems">
+            <label class="form-check-label" for="service4">Home Theater Systems</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service5" name="services[]" value="Security Solutions">
+            <label class="form-check-label" for="service5">Security Solutions</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service6" name="services[]" value="Networking Solutions">
+            <label class="form-check-label" for="service6">Networking Solutions</label>
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="service7" name="services[]" value="Shading Solutions">
+            <label class="form-check-label" for="service7">Shading Solutions</label>
+        </div>
+
+        <div class="additional-input">
+            <label for="additionalDetails" class="form-label">Additional Services</label>
+            <textarea class="form-control" id="additionalDetails" name="additionalDetails" rows="4" placeholder="Please provide any other information..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-submit w-100">Submit Estimate Request</button>
+    </form>
+</div>
+
+<!-- Notification message -->
+<div class="notification">
+    <p>Please allow 3-4 business days for a response.</p>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
